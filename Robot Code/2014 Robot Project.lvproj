@@ -1,19 +1,5 @@
 ﻿<?xml version='1.0' encoding='UTF-8'?>
 <Project Type="Project" LVVersion="13008000">
-	<Item Name="My Computer" Type="My Computer">
-		<Property Name="NI.SortType" Type="Int">3</Property>
-		<Property Name="server.app.propertiesEnabled" Type="Bool">true</Property>
-		<Property Name="server.control.propertiesEnabled" Type="Bool">true</Property>
-		<Property Name="server.tcp.enabled" Type="Bool">false</Property>
-		<Property Name="server.tcp.port" Type="Int">0</Property>
-		<Property Name="server.tcp.serviceName" Type="Str">My Computer/VI Server</Property>
-		<Property Name="server.tcp.serviceName.default" Type="Str">My Computer/VI Server</Property>
-		<Property Name="server.vi.callsEnabled" Type="Bool">true</Property>
-		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
-		<Property Name="specify.custom.address" Type="Bool">false</Property>
-		<Item Name="Dependencies" Type="Dependencies"/>
-		<Item Name="Build Specifications" Type="Build"/>
-	</Item>
 	<Item Name="RT CompactRIO Target" Type="RT CompactRIO">
 		<Property Name="alias.name" Type="Str">RT CompactRIO Target</Property>
 		<Property Name="alias.value" Type="Str">10.21.69.2</Property>
@@ -598,10 +584,6 @@ DirectoryIndex index.htm
 			<Item Name="NiFpgaLv.dll" Type="Document" URL="NiFpgaLv.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
-			<Item Name="niLvFpgaFormatErrorSource.vi" Type="VI" URL="/&lt;vilib&gt;/rvi/errors/niLvFpgaFormatErrorSource.vi"/>
-			<Item Name="niLvFpgaWhatHappensToTopLevelVI.ctl" Type="VI" URL="/&lt;vilib&gt;/rvi/errors/niLvFpgaWhatHappensToTopLevelVI.ctl"/>
-			<Item Name="niFpgaNodeNameForErrorReporting.ctl" Type="VI" URL="/&lt;vilib&gt;/rvi/interface/common/niFpgaNodeNameForErrorReporting.ctl"/>
-			<Item Name="niLvFpgaAdjustHostInterfaceError.vi" Type="VI" URL="/&lt;vilib&gt;/rvi/errors/niLvFpgaAdjustHostInterfaceError.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="FRC Robot Boot-up Deployment" Type="{69A947D5-514E-4E75-818E-69657C0547D8}">
@@ -644,5 +626,19 @@ DirectoryIndex index.htm
 				<Property Name="TgtF_targetfileName" Type="Str">startup.rtexe</Property>
 			</Item>
 		</Item>
+	</Item>
+	<Item Name="My Computer" Type="My Computer">
+		<Property Name="NI.SortType" Type="Int">3</Property>
+		<Property Name="server.app.propertiesEnabled" Type="Bool">true</Property>
+		<Property Name="server.control.propertiesEnabled" Type="Bool">true</Property>
+		<Property Name="server.tcp.enabled" Type="Bool">false</Property>
+		<Property Name="server.tcp.port" Type="Int">0</Property>
+		<Property Name="server.tcp.serviceName" Type="Str">My Computer/VI Server</Property>
+		<Property Name="server.tcp.serviceName.default" Type="Str">My Computer/VI Server</Property>
+		<Property Name="server.vi.callsEnabled" Type="Bool">true</Property>
+		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
+		<Property Name="specify.custom.address" Type="Bool">false</Property>
+		<Item Name="Dependencies" Type="Dependencies"/>
+		<Item Name="Build Specifications" Type="Build"/>
 	</Item>
 </Project>
