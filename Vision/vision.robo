@@ -1,4 +1,4 @@
-<head><version>2.59.10</version></head>
+<head><version>2.61.0</version></head>
 <Axis_Internet_Camera>
   <auto_back_light>TRUE</auto_back_light>
   <auto_exposure>FALSE</auto_exposure>
@@ -158,10 +158,28 @@
   <set_4_array>FALSE</set_4_array>
   <set_4_once>FALSE</set_4_once>
   <value_1>[BFR_COORDINATES]</value_1>
+  <value_2>[SmartDashboardtargetPixelXCenter]</value_2>
+  <value_3>[SmartDashboardDistance]</value_3>
+  <value_4>[SmartDashboardcLineBottom]</value_4>
   <variable_1>/SmartDashboard/BFR_COORDINATES</variable_1>
+  <variable_2>/SmartDashboard/targetPixelXCenter</variable_2>
+  <variable_3>/SmartDashboard/Distance</variable_3>
+  <variable_4>/SmartDashboard/cLineBottom</variable_4>
+</Set_Variable>
+<Set_Variable>
+  <set_1_array>FALSE</set_1_array>
+  <set_1_once>FALSE</set_1_once>
+  <set_2_array>FALSE</set_2_array>
+  <set_2_once>FALSE</set_2_once>
+  <set_3_array>FALSE</set_3_array>
+  <set_3_once>FALSE</set_3_once>
+  <set_4_array>FALSE</set_4_array>
+  <set_4_once>FALSE</set_4_once>
+  <value_1>[SmartDashboardcLineTop]</value_1>
+  <variable_1>/SmartDashboard/cLineTop</variable_1>
 </Set_Variable>
 <NetworkTables>
-  <delay/>
+  <delay>16</delay>
   <filter_type_index>0</filter_type_index>
   <hostname>127.0.0.1</hostname>
   <port>1735</port>

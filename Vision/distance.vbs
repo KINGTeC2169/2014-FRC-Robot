@@ -45,7 +45,7 @@ if isArray(list) then
     ' determine distance in inches
     totalDistance = (((targetHeight*imageHeight)/targetPixelHeight)/2)/tan(((cameraFieldOfView*3.14159)/180.0)/2.0)
 	write vbCRLF & "Distance (in): " & totalDistance
-	SetVariable "/SmartDashboard/Distance", CInt((totalDistance*100)/12)/100
+	SetVariable "/SmartDashboard/Distance", CLng((totalDistance*100)/12)/100
 
 
     '''' we can use a known distance to determine FOV if we don't know it
