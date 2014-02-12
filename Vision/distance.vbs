@@ -43,7 +43,11 @@ if isArray(list) then
   	SetVariable "/SmartDashboard/cLineBottom" , targetPixelYCenter - (targetPixelHeight / 2)
 
     ' determine distance in inches
-    totalDistance = (((targetHeight*imageHeight)/targetPixelHeight)/2)/tan(((cameraFieldOfView*3.14159)/180.0)/2.0)
+    if targetPixelHeight == 0 then
+        totalDistance = -1
+    else
+        totalDistance = (((targetHeight*imageHeight)/targetPixelHeight)/2)/tan(((cameraFieldOfView*3.14159)/180.0)/2.0)
+    end if
 	write vbCRLF & "Distance (in): " & totalDistance
 	SetVariable "/SmartDashboard/Distance", CLng((totalDistance*100)/12)/100
 
