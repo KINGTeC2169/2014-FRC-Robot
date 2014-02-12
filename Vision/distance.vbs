@@ -8,7 +8,7 @@ if isArray(list) then
 
 	''This is the test setting
   	cameraFieldOfView = 47.5
-	targetHeight = 6.75
+	targetHeight = 9.00
 	
 	'' calibrated for an Axis camera
   	' cameraFieldOfView = 47.5
@@ -35,8 +35,21 @@ if isArray(list) then
 
   	' Calculate the x-coordinate of the center line by averaging
   	' the x-component of all four coordinates
-  	SetVariable "/SmartDashboard/targetPixelXCenter", ((leftx + leftxx + rightx + rightxx)) / 4
+    targetPixelXCenter = ((leftx + leftxx + rightx + rightxx)) / 4
+  	SetVariable "/SmartDashboard/targetPixelXCenter", targetPixelXCenter
   	targetPixelYCenter = ((lefty + leftyy + righty + rightyy)) / 4
+
+    ' Determine which goal is hot
+    ' 0 is left, 1 is center, 2 is right, -1 is error
+    if (targetPixelXCenter < 300) and (targetPixelXCenter >= 0) then
+      SetVariable "/SmartDashboard/Goal", 0
+    elseif (targetPixelXCenter >=300) and (targetPixelXCenter <= 340) then
+      SetVariable "/SmartDashboard/Goal", 1
+    elseif (targetPixelXCenter <=640) and (targetPixelXCenter > 340) then
+      SetVariable "/SmartDashboard/Goal", 2
+    else
+      SetVariable "/SmartDashboard/Goal", -1
+    end if
 
   	' Draw the center line
   	SetVariable "/SmartDashboard/cLineTop", targetPixelYCenter + (targetPixelHeight / 2)

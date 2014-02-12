@@ -54,8 +54,8 @@
         <filter_id>63</filter_id>
         <invert_count>0</invert_count>
         <invert_threshold>0</invert_threshold>
-        <ratio>0.7272</ratio>
-        <weight_threshold/>
+        <ratio>.66</ratio>
+        <weight_threshold>0.4</weight_threshold>
       </filter:2>
       <filter:3>
         <count_threshold>0</count_threshold>
@@ -74,14 +74,6 @@
         <invert_threshold>0</invert_threshold>
         <weight_threshold>0.3</weight_threshold>
       </filter:4>
-      <filter:5>
-        <count_threshold>0</count_threshold>
-        <create_array>0</create_array>
-        <filter_id>14</filter_id>
-        <invert_count>0</invert_count>
-        <invert_threshold>1</invert_threshold>
-        <weight_threshold>0.7</weight_threshold>
-      </filter:5>
     </tab>
     <tab:2/>
     <tab:3/>
@@ -109,8 +101,6 @@
 </Blob_Replace>
 <VBScript_Program>
   <filename>.\distance.vbs</filename>
-  <script>/smartdashboard/bfrCoordinates = GetArrayVariable("/SmartDashboard/BFR_COORDINATES")
-</script>
   <source_mode>file</source_mode>
   <tab_size_index>1</tab_size_index>
 </VBScript_Program>
@@ -132,6 +122,7 @@
   <font_size_index>2</font_size_index>
   <northwest>SmartDashboardDistance
 /SmartDashboard/BFR_COORDINATES
+/SmartDashboard/Goal
 </northwest>
 </Display_Variables>
 <Display_Line>
@@ -176,7 +167,9 @@
   <set_4_array>FALSE</set_4_array>
   <set_4_once>FALSE</set_4_once>
   <value_1>[SmartDashboardcLineTop]</value_1>
+  <value_2>[SmartDashboardGoal]</value_2>
   <variable_1>/SmartDashboard/cLineTop</variable_1>
+  <variable_2>/SmartDashboard/Goal</variable_2>
 </Set_Variable>
 <NetworkTables>
   <delay>16</delay>
@@ -187,6 +180,7 @@
   <variables_to_send>/SmartDashboard/cLineBottom
 /SmartDashboard/cLineTop
 /SmartDashboard/Distance
+/SmartDashboard/Goal
 /SmartDashboard/targetPixelXCenter</variables_to_send>
   <variable_type_index>0</variable_type_index>
 </NetworkTables>
