@@ -8,7 +8,7 @@ if isArray(list) then
 
 	''This is the test setting
   	cameraFieldOfView = 47.5
-	targetHeight = 5.75
+	targetHeight = 6.75
 	
 	'' calibrated for an Axis camera
   	' cameraFieldOfView = 47.5
@@ -43,7 +43,7 @@ if isArray(list) then
   	SetVariable "/SmartDashboard/cLineBottom" , targetPixelYCenter - (targetPixelHeight / 2)
 
     ' determine distance in inches
-    if targetPixelHeight == 0 then
+    if targetPixelHeight = 0 then
         totalDistance = -1
     else
         totalDistance = (((targetHeight*imageHeight)/targetPixelHeight)/2)/tan(((cameraFieldOfView*3.14159)/180.0)/2.0)
