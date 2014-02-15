@@ -1,4 +1,4 @@
-<head><version>2.61.0</version></head>
+<head><version>2.61.1</version></head>
 <Axis_Internet_Camera>
   <auto_back_light>TRUE</auto_back_light>
   <auto_exposure>FALSE</auto_exposure>
@@ -54,8 +54,8 @@
         <filter_id>63</filter_id>
         <invert_count>0</invert_count>
         <invert_threshold>0</invert_threshold>
-        <ratio>.66</ratio>
-        <weight_threshold>0.4</weight_threshold>
+        <ratio>5.875</ratio>
+        <weight_threshold>0.6</weight_threshold>
       </filter:2>
       <filter:3>
         <count_threshold>0</count_threshold>

@@ -3,18 +3,18 @@ if isArray(list) then
   if ubound(list) > 0 then
 
 	targetPixelHeight = 0
-    targetSamples = 0
-    imageHeight = GetVariable("IMAGE_HEIGHT")
+  targetSamples = 0
+   imageHeight = GetVariable("IMAGE_HEIGHT")
 
 	''This is the test setting
-  	cameraFieldOfView = 47.5
-	targetHeight = 9.00
+  cameraFieldOfView = 47.5
+	targetHeight = 4
 	
 	'' calibrated for an Axis camera
-  	' cameraFieldOfView = 47.5
+  ' cameraFieldOfView = 47.5
 	' targetHeight = 37
 
-    ' grab list of coordinates from blob_replace
+  ' grab list of coordinates from blob_replace
 	' note the array is sorted by previous module in a specific order
     righty = list(1)
     rightyy = list(7)
