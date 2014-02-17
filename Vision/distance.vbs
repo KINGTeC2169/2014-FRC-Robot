@@ -39,18 +39,6 @@ if isArray(list) then
   	SetVariable "/SmartDashboard/targetPixelXCenter", targetPixelXCenter
   	targetPixelYCenter = ((lefty + leftyy + righty + rightyy)) / 4
 
-    ' Determine which goal is hot
-    ' 0 is left, 1 is center, 2 is right, -1 is error
-    if (targetPixelXCenter < 300) and (targetPixelXCenter >= 0) then
-      SetVariable "/SmartDashboard/Goal", 0
-    elseif (targetPixelXCenter >=300) and (targetPixelXCenter <= 340) then
-      SetVariable "/SmartDashboard/Goal", 1
-    elseif (targetPixelXCenter <=640) and (targetPixelXCenter > 340) then
-      SetVariable "/SmartDashboard/Goal", 2
-    else
-      SetVariable "/SmartDashboard/Goal", -1
-    end if
-
   	' Draw the center line
   	SetVariable "/SmartDashboard/cLineTop", targetPixelYCenter + (targetPixelHeight / 2)
   	SetVariable "/SmartDashboard/cLineBottom" , targetPixelYCenter - (targetPixelHeight / 2)
