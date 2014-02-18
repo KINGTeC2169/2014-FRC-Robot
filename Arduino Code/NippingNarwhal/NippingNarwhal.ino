@@ -9,7 +9,24 @@ byte subnet[] = {255,255,255,0};
 IPAddress ip(10,21,69,7);
 EthernetServer server(1180);
 
+// Robot State Config                                                        
+//
+// Note: This section is likely to change frequently up until
+// the lights are installed on the competition robot. Confirm that
+// any changes are reflected across both the LabVIEW broadcasting
+// and Arduino receiving code before commiting.
+//
+// Higher values take precedence, e.g. if the robot is in
+// autonomous (2) and shooting (4) the state will be set to
+// shooting (4).
+//
+// "0" implies the robot is disabled
+// "1" implies the robot is enabled in tele-op
+// "2" implies the robot is enabled in autonomous
+// "3" implies the robot is spinning
+// "4" implies the robot is shooting
 String robotState = "";
+
 
 void setup() {
   // Configure default Serial COM to communicate at 57600 baud
@@ -50,4 +67,3 @@ void loop() {
   }
   delay(100);
 }
-
