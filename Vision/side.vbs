@@ -1,5 +1,7 @@
 BLOBS = GetArrayVariable("BLOBS")
 hotCenterX = GetFloatVariable("/SmartDashboard/targetPixelXCenter")
+tracking = GetFloatVariable("/SmartDashboard/Tracking")
+side = -1
 
 if isArray(BLOBS) then
   if ubound(BLOBS) > 0 then
@@ -20,9 +22,13 @@ if isArray(BLOBS) then
       side = -1
     end if
 
-    '' Display to debug console
-    write vbCRLF & "X1: " & hotCenterX & " X2: " & verticalCenterX & " Side: " & side
-
-    SetVariable "/SmartDashboard/Side", side
 	end if
 end if
+
+if (tracking = 0) then 
+	side = -1
+end if
+
+'' Display to debug console
+write vbCRLF & "X1: " & hotCenterX & " X2: " & verticalCenterX & " Side: " & side
+SetVariable "/SmartDashboard/Side", side
