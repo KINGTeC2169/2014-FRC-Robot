@@ -1,20 +1,11 @@
 <head><version>2.61.14</version></head>
-<Axis_Internet_Camera>
-  <auto_back_light>TRUE</auto_back_light>
-  <auto_exposure>FALSE</auto_exposure>
-  <auto_white_balance>TRUE</auto_white_balance>
-  <brightness_value>50</brightness_value>
-  <color_level_value>50</color_level_value>
-  <compression_index>5</compression_index>
-  <contrast_value>50</contrast_value>
-  <exposure_value>50</exposure_value>
-  <ip_address>10.21.69.11</ip_address>
+<Read_HTTP>
+  <erase_on_error>TRUE</erase_on_error>
   <is_active>TRUE</is_active>
-  <password>beyond2169</password>
-  <port>80</port>
-  <sharpness_value>50</sharpness_value>
-  <username>root</username>
-</Axis_Internet_Camera>
+  <refresh_time>100</refresh_time>
+  <timeout>1000</timeout>
+  <url>https://10.21.69.11/mjpg/video.mjpg?resolution=640x480&amp;compression=70&amp;mirror=0&amp;rotation=0&amp;textposition=top&amp;text=0&amp;clock=0&amp;date=0&amp;overlayimage=0&amp;fps=10&amp;keyframe_interval=32&amp;maxframesize=0</url>
+</Read_HTTP>
 <Marker>
   <include_graphics>0</include_graphics>
   <name>Pre-filtering</name>
