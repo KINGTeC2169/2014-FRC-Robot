@@ -1,6 +1,6 @@
 <head><version>2.61.14</version></head>
 <Read_HTTP>
-  <erase_on_error>TRUE</erase_on_error>
+  <erase_on_error>FALSE</erase_on_error>
   <is_active>TRUE</is_active>
   <refresh_time>100</refresh_time>
   <timeout>1000</timeout>
