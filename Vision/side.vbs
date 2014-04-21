@@ -1,5 +1,5 @@
 BLOBS = GetArrayVariable("BLOBS")
-hotCenterX = GetFloatVariable("/SmartDashboard/targetPixelXCenter")
+hotCenterX = GetVariable("COG_X")
 tracking = GetFloatVariable("/SmartDashboard/Tracking")
 side = -1
 
